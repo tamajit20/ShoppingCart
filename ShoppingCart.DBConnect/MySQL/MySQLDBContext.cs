@@ -13,12 +13,6 @@ namespace ShoppingCart.DBConnect.MySQL
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class MySQLDBContext : DbContext
     {
-        //public DbSet<User> Users { get; set; }
-        //public DbSet<Menu> Menus { get; set; }
-        //public DbSet<SubMenu> SubMenus { get; set; }
-        //public DbSet<Category> Categories { get; set; }
-        //public DbSet<SubCategory> SubCategories { get; set; }
-
         public MySQLDBContext() : base("mysqlCon")
         {
         }
@@ -40,8 +34,13 @@ namespace ShoppingCart.DBConnect.MySQL
             modelBuilder.Entity<Product>().ToTable("tProduct").HasKey(t => t.Id)
                      .HasMany(l => l.ProductSiteLinks).WithRequired().HasForeignKey(f => f.FK_ProductId);
 
-             modelBuilder.Entity<ProductSiteLink>().ToTable("tProductSiteLink").HasKey(t => t.Id)
+            modelBuilder.Entity<Product>().ToTable("tProduct").HasKey(t => t.Id)
+                   .HasMany(l => l.ProductImages).WithRequired().HasForeignKey(f => f.FK_ProductId);
+
+            modelBuilder.Entity<ProductSiteLink>().ToTable("tProductSiteLink").HasKey(t => t.Id)
                  .HasRequired(e => e.WebSite).WithOptional();
+
+            modelBuilder.Entity<ProductImage>().ToTable("tProductImage").HasKey(t => t.Id);
 
             modelBuilder.Entity<Website>().ToTable("tWebsite").HasKey(t => t.Id);
 

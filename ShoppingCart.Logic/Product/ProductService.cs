@@ -34,7 +34,7 @@ namespace ShoppingCart.Logic
         public IList<Product> GetProducts()
         {
             try
-            {               
+            {
                 var predicate = PredicateBuilder.True<Product>();
                 predicate = predicate.And(x => !x.IsDeleted);
 
@@ -45,6 +45,11 @@ namespace ShoppingCart.Logic
                     if (each.ProductSiteLinks != null)
                     {
                         each.ProductSiteLinks = each.ProductSiteLinks.Where(x => !x.IsDeleted).ToList();
+                    }
+
+                    if (each.ProductImages != null)
+                    {
+                        each.ProductImages = each.ProductImages.Where(x => !x.IsDeleted).OrderBy(x=>x.Order).ToList();
                     }
                 });
 

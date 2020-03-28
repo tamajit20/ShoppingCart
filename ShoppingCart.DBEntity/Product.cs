@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ShoppingCart.DBEntity
 {
@@ -11,6 +7,7 @@ namespace ShoppingCart.DBEntity
         public virtual string Name { get; set; }
         public virtual string Description { get; set; }
         public virtual IList<ProductSiteLink> ProductSiteLinks { get; set; } 
+        public virtual IList<ProductImage> ProductImages { get; set; }
     }
 
     public class ProductSiteLink : BaseEntity
@@ -19,5 +16,12 @@ namespace ShoppingCart.DBEntity
         public virtual long FK_ProductId { get; set; }
         public virtual long FK_WebSiteId { get; set; }
         public virtual Website WebSite { get; set; }
+    }
+
+    public class ProductImage : BaseEntity
+    {
+        public virtual string Image { get; set; }
+        public virtual long FK_ProductId { get; set; }
+        public virtual int Order { get; set; }
     }
 }

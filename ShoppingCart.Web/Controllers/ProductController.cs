@@ -16,7 +16,6 @@ namespace ShoppingCart.Web.Controllers
 
         [HttpGet]
         public IHttpActionResult GetProducts()
-
         {
             ProductViewModels result = new ProductViewModels();
             try

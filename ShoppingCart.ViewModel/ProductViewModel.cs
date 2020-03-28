@@ -31,6 +31,7 @@ namespace ShoppingCart.ViewModel
         public string Name { get; set; }
         public string Description { get; set; }
         public IList<ProductSiteLinkViewModel> ProductSiteLinks { get; set; }
+        public IList<ProductImageViewModel> Images { get; set; }
 
 
         public ProductViewModel ConvertToViewModel(Product input)
@@ -51,10 +52,19 @@ namespace ShoppingCart.ViewModel
                 { ret.ProductSiteLinks.Add(new ProductSiteLinkViewModel().ConvertToViewModel(currentSubMenu)); });
             }
 
+            if (input.ProductImages != null && input.ProductImages.Count > 0)
+            {
+                ret.Images = new List<ProductImageViewModel>();
+                Parallel.ForEach(input.ProductImages, (currentImage) =>
+                     {
+                         ret.Images.Add(new ProductImageViewModel().ConvertToViewModel(currentImage));
+                     });
+            }
+
             return ret;
         }
-
     }
+
 
     public class ProductSiteLinkViewModel : BaseViewModel
     {
@@ -83,4 +93,33 @@ namespace ShoppingCart.ViewModel
             };
         }
     }
+
+    public class ProductImageViewModel : BaseViewModel
+    {
+        public string Image { get; set; }
+        public int Order { get; set; }
+
+        public ProductImage ConvertToDBEntity(ProductImageViewModel input)
+        {
+            return new ProductImage()
+            {
+                Id = input.Id,
+                Image = input.Image,
+                Order = input.Order,
+                IsDeleted = input.IsDeleted
+            };
+        }
+
+        public ProductImageViewModel ConvertToViewModel(ProductImage input)
+        {
+            return new ProductImageViewModel()
+            {
+                Id = input.Id,
+                Image = input.Image,
+                Order = input.Order,
+                IsDeleted = input.IsDeleted
+            };
+        }
+    }
 }
+

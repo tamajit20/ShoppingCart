@@ -31,6 +31,7 @@ namespace ShoppingCart.Web
             container.RegisterType<IRepository<ProductSiteLink>, Repository<ProductSiteLink>>();
             container.RegisterType<IRepository<CarousellComponent>, Repository<CarousellComponent>>();
             container.RegisterType<IRepository<BoxComponent>, Repository<BoxComponent>>();
+            container.RegisterType<IRepository<ProductImage>, Repository<ProductImage>>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
