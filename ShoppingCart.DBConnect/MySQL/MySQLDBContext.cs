@@ -1,12 +1,6 @@
 ﻿using MySql.Data.Entity;
 using ShoppingCart.DBEntity;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShoppingCart.DBConnect.MySQL
 {
@@ -47,6 +41,10 @@ namespace ShoppingCart.DBConnect.MySQL
             modelBuilder.Entity<CarousellComponent>().ToTable("tCarousellComponent").HasKey(t => t.Id);
 
             modelBuilder.Entity<BoxComponent>().ToTable("tBoxComponent").HasKey(t => t.Id);
+
+            modelBuilder.Entity<ContactUs>().ToTable("tContactUs").HasKey(t => t.Id);
+
+            modelBuilder.Entity<ContactUsType>().ToTable("tContactUsType").HasKey(t => t.Id);
         }
     }
 }

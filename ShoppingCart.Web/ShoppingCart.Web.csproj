@@ -177,6 +177,7 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SupportController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Filters\ExceptionHandlerFilter.cs" />
     <Compile Include="Global.asax.cs">

@@ -52,6 +52,8 @@
     <Compile Include="Category\CategoryService.cs" />
     <Compile Include="Menu\IMenuService.cs" />
     <Compile Include="Menu\MenuService.cs" />
+    <Compile Include="Support\ISupportService.cs" />
+    <Compile Include="Support\SupportService.cs" />
     <Compile Include="User\IUserService.cs" />
     <Compile Include="User\UserService.cs" />
   </ItemGroup>

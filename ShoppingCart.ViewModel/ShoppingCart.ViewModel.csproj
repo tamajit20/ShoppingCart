@@ -45,6 +45,7 @@
     <Compile Include="BoxComponentViewModel.cs" />
     <Compile Include="CarousellComponentViewModel.cs" />
     <Compile Include="CategoryViewModel.cs" />
+    <Compile Include="ContactUsViewModel.cs" />
     <Compile Include="MenuViewModel.cs" />
     <Compile Include="WebSiteViewModel.cs" />
     <Compile Include="ProductViewModel.cs" />

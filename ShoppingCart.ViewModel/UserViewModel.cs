@@ -1,9 +1,4 @@
 ﻿using ShoppingCart.DBEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShoppingCart.ViewModel
 {
@@ -14,7 +9,6 @@ namespace ShoppingCart.ViewModel
         public long PhoneNumber { get; set; }
         public int PhoneCountryCode { get; set; }
         public string Email { get; set; }
-        public bool IsDeleted { get; set; }
 
         public User ConvertToDBEntity()
         {

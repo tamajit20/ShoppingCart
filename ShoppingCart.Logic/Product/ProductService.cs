@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using ShoppingCart.DBEntity;
 using ShoppingCart.DBConnect.Common;
-using System.Linq.Expressions;
 
 namespace ShoppingCart.Logic
 {
