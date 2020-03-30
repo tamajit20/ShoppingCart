@@ -14,8 +14,7 @@ namespace ShoppingCart.Web.Controllers
             _dashboardService = dashbboardService;
         }
 
-        [HttpGet]
-        public IHttpActionResult GetCarousellComponents()
+        public IHttpActionResult FetchCarousellComponents()
         {
             CarousellCompomentViewModels result = new CarousellCompomentViewModels();
             try
@@ -29,8 +28,7 @@ namespace ShoppingCart.Web.Controllers
             }
         }
 
-        [HttpGet]
-        public IHttpActionResult GetBoxComponents()
+        public IHttpActionResult FetchBoxComponents()
         {
             BoxCompomentViewModels result = new BoxCompomentViewModels();
             try

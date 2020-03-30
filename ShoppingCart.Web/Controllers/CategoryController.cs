@@ -14,7 +14,6 @@ namespace ShoppingCart.Web.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpGet]
         public IHttpActionResult AddCategory(CategoryViewModel category)
         {
             try
@@ -28,8 +27,7 @@ namespace ShoppingCart.Web.Controllers
             }
         }
 
-        [HttpGet]
-        public IHttpActionResult GetCategories()
+        public IHttpActionResult FetchCategories()
         {
             CategoryViewModels result = new CategoryViewModels();
             try

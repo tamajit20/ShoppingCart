@@ -36,6 +36,7 @@ namespace ShoppingCart.ViewModel
             {
                 Id = component.Id,
                 Name = component.Name,
+                Image = component.Image,
                 Link = component.Link,
                 Order = component.Order,
                 IsDeleted = component.IsDeleted
@@ -47,6 +48,7 @@ namespace ShoppingCart.ViewModel
             return new CarousellComponentViewModel()
             {
                 Id = component.Id,
+                Image = component.Image,
                 Name = component.Name,
                 Link = component.Link,
                 Order = component.Order,

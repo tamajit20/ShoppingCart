@@ -14,8 +14,7 @@ namespace ShoppingCart.Web.Controllers
             _productService = productService;
         }
 
-        [HttpGet]
-        public IHttpActionResult GetProducts()
+        public IHttpActionResult FetchProducts()
         {
             ProductViewModels result = new ProductViewModels();
             try

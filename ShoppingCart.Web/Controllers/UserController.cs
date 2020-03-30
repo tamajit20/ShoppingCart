@@ -14,7 +14,6 @@ namespace ShoppingCart.Web.Controllers
             _userService = userService;
         }
 
-        [HttpGet]
         public IHttpActionResult AddUser(UserViewModel user)
         {
             try

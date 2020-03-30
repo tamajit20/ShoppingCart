@@ -6,7 +6,7 @@ namespace ShoppingCart.ViewModel
 {
     public class MenuViewModels : BaseViewModel
     {
-        IList<MenuViewModel> Menus { get; set; }
+        public IList<MenuViewModel> Menus { get; set; }
 
         public void PopulateList(IList<Menu> menu)
         {

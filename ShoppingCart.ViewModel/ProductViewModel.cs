@@ -28,6 +28,7 @@ namespace ShoppingCart.ViewModel
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public string PrimaryImage { get; set; }
         public IList<ProductSiteLinkViewModel> ProductSiteLinks { get; set; }
         public IList<ProductImageViewModel> Images { get; set; }
 
@@ -38,6 +39,7 @@ namespace ShoppingCart.ViewModel
             {
                 Id = input.Id,
                 Name = input.Name,
+                PrimaryImage = PrimaryImage,
                 Description = input.Description,
                 IsDeleted = input.IsDeleted
             };

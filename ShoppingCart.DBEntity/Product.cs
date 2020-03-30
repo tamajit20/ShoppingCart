@@ -6,6 +6,7 @@ namespace ShoppingCart.DBEntity
     {
         public virtual string Name { get; set; }
         public virtual string Description { get; set; }
+        public virtual string PrimaryImage { get; set; }
         public virtual IList<ProductSiteLink> ProductSiteLinks { get; set; } 
         public virtual IList<ProductImage> ProductImages { get; set; }
     }

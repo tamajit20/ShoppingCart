@@ -14,7 +14,6 @@ namespace ShoppingCart.Web.Controllers
             _menuService = menuService;
         }
 
-        [HttpGet]
         public IHttpActionResult AddMenu(MenuViewModel menu)
         {
             try
@@ -28,8 +27,7 @@ namespace ShoppingCart.Web.Controllers
             }
         }
 
-        [HttpGet]
-        public IHttpActionResult GetMenus()
+        public IHttpActionResult FetchMenus()
         {
             MenuViewModels result = new MenuViewModels();
             try
@@ -43,5 +41,4 @@ namespace ShoppingCart.Web.Controllers
             }
         }
     }
-
 }

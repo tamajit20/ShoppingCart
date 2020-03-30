@@ -14,7 +14,6 @@ namespace ShoppingCart.Web.Controllers
             _supportService = supportService;
         }
 
-        [HttpGet]
         public IHttpActionResult AddConactUs(ContactUsViewModel input)
         {
             try
@@ -28,8 +27,7 @@ namespace ShoppingCart.Web.Controllers
             }
         }
 
-        [HttpGet]
-        public IHttpActionResult GetContactUsTypes()
+        public IHttpActionResult FetchContactUsTypes()
         {
             ConactUsTypeViewModels result = new ConactUsTypeViewModels();
             try

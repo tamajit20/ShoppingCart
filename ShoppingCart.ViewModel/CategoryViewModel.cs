@@ -7,7 +7,7 @@ namespace ShoppingCart.ViewModel
 
     public class CategoryViewModels 
     {
-        IList<CategoryViewModel> Categories { get; set; }
+        public IList<CategoryViewModel> Categories { get; set; }
 
         public void PopulateList(IList<Category> categories)
         {
